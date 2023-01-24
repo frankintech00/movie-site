@@ -7,16 +7,18 @@ const Movie = ({ movie }) => {
   const poster =
     movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
   return (
-    <div className="p-5 pl-25 pr-25 m-auto max-w-25">
-      <h2>{movie.Title}</h2>
-      <div>
+    <div className="text-center">
+      <div className="">
+        <h2 className="text-gray-100 text-3xl my-3">{movie.Title}</h2>
         <img
-          width="200"
+          className="w-3/4 h-auto mx-auto"
           alt={`The movie titled: ${movie.Title}`}
           src={poster}
         />
       </div>
-      <p>({movie.Year})</p>
+      <p className="text-right text-xl text-gray-100 my-1 mr-12">
+        ({movie.Year})
+      </p>
     </div>
   );
 };

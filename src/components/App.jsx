@@ -9,7 +9,7 @@ const MOVIE_API_URL = "http://www.omdbapi.com/?s=man&apikey=243ec885";
 const initialState = {
   movies: [],
   errorMessage: null,
-  loading: true,
+  loading: false,
 };
 
 const reducer = (state, action) => {
@@ -74,10 +74,10 @@ const App = () => {
   const { movies, errorMessage, loading } = state;
 
   return (
-    <div className="App">
+    <div className="text-center">
       <Header text="Movie Search App" />
       <Search search={search} />
-      <div className="movies">
+      <div className="bg-gray-600 grid grid-cols-4">
         {loading && !errorMessage ? (
           <span>loading...</span>
         ) : errorMessage ? (
