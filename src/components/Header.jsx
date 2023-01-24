@@ -9,7 +9,7 @@ const Header = (props) => {
   // The text inside the h2 element is determined by the "text" prop passed in by App.jsx
 
   return (
-    <header className="App-header flex justify-center items-center text-5xl font-inter text-gray-100 tracking-wider py-10 uppercase font-semibold bg-gray-900 drop-shadow-xl mb-10">
+    <header className="App-header flex justify-center items-center text-5xl font-inter text-gray-100 tracking-wider py-10 uppercase font-semibold bg-gray-900 drop-shadow-xl">
       <h2>{props.text}</h2>
     </header>
   );
